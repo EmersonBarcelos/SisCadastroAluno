@@ -1,7 +1,7 @@
 import mysql.connector
 import os
 try:
-    con = mysql.connector.connect(host='localhost', database='db_alunos', user='litiane', password='')
+    con = mysql.connector.connect(host='localhost', database='db_alunos', user='root', password='')
 except:
     print("Erro ao conectar ao banco de dados!")
 def conectar():#Faz a conexão com o banco de dados
