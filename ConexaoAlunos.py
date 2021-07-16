@@ -70,28 +70,28 @@ def atualizar():#Solicita qual registro deseja atualizar
     print("║[4]-TURMA              ║")
     print("╚═══════════════════════╝")
     op = input("Qual informação deseja atualizar?:")
-    if (op == '1'):  # Atualiza o nome
+    if op == '1':  # Atualiza o nome
         id = input("Digite o ID do registro:")
         nome = input("Qual o novo nome:")
         cursor.execute(f"UPDATE aluno_avaliacao SET nome = '{nome}' WHERE id = '{id}'")
         con.commit()
         print("-->REGISTRO ATUALIZADO<--")
 
-    if (op == '2'):  # Atualiza a NOTA 1
+    if op == '2':  # Atualiza a NOTA 1
         id = input("Digite o ID do registro:")
         nota1 = input("Qual a nova nota:")
         cursor.execute(f"UPDATE aluno_avaliacao SET nota1 = '{nota1}' WHERE id = '{id}'")
         con.commit()
         print("-->REGISTRO ATUALIZADO<--")
 
-    if (op == '3'):  # Atualiza a NOTA 2
+    if op == '3':  # Atualiza a NOTA 2
         id = input("Digite o ID do registro:")
         nota2 = input("Qual a nova nota:")
         cursor.execute(f"UPDATE aluno_avaliacao SET nota2 = '{nota2}' WHERE id = '{id}'")
         con.commit()
         print("-->REGISTRO ATUALIZADO<--")
 
-    if (op == '4'):  # Atualiza a turma
+    if op == '4':  # Atualiza a turma
         id = input("Digite o ID do registro:")
         turma = input("Qual a nova turma:")
         cursor.execute(f"UPDATE aluno_avaliacao SET turma = '{turma}' WHERE id = '{id}'")
