@@ -33,13 +33,12 @@ def consultar():#Mostra todos os alunos cadastrados no banco de dados
 def inserir():#Solicita ao usuário os dados para inserção
     os.system("cls")
     cursor = con.cursor()
-    id = input("Digite o ID:")
     nome = input("Digite o nome:")
-    nota = input("Digite a nota:")
+    nota1 = input("Digite a nota:")
+    nota2 = input("Digite a nota 2:")
     turma = input("Digite a turma:")
     ano = input("Digite o ano:")
-    cursor.execute(
-        f"INSERT INTO aluno_avaliacao (id,nome,nota,turma,ano) VALUES ('{id}','{nome}','{nota}','{turma}','{ano}');")
+    cursor.execute(f"INSERT INTO aluno_avaliacao (nome,nota1,nota2,turma,ano) VALUES ('{nome}','{nota1}','{nota2}','{turma}','{ano}');")
     con.commit()
     print("==>ALUNO CADASTRADO COM SUCESSO<==")
 
